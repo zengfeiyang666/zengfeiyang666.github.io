@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if ($('.justified-gallery > p > .gallery-item').length) {
             $('.justified-gallery > p > .gallery-item').unwrap();
         }
-        $('.justified-gallery').justifiedGallery();
+        // $('.justified-gallery').justifiedGallery();
+        //修改部分
+        $('.justified-gallery').justifiedGallery({rowHeight:400, margins:4});
+		//修改部分
     }
 });

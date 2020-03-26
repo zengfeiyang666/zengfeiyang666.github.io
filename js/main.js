@@ -2,7 +2,10 @@
     $('.article img:not(".not-gallery-item")').each(function () {
         // wrap images with link and add caption if possible
         if ($(this).parent('a').length === 0) {
-            $(this).wrap('<a class="gallery-item" href="' + $(this).attr('src') + '"></a>');
+            //我们写文章的时候发现图片默认是左对齐的，为了美观，这里可以修改成置中。
+            //修改部分
+            $(this).wrap('<a class="gallery-item" style="display:block;text-align:center;" href="' + $(this).attr('src') + '"></a>');
+            //修改部分
             if (this.alt) {
                 $(this).after('<div class="has-text-centered is-size-6 has-text-grey caption">' + this.alt + '</div>');
             }
