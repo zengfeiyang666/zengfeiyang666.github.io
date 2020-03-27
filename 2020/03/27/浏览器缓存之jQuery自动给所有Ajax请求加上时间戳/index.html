@@ -7,17 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>杨增非的BLOG</title>
+<title>浏览器缓存之Jquery自动给所有Ajax请求加上时间戳 - 杨增非的BLOG</title>
 
 
-    <meta name="description" content="SpringBoot,Spring,Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="杨增非的BLOG">
-<meta property="og:url" content="https://zengfeiyang666.github.io/index.html">
+    <meta name="description" content="在使用 jQuery 请求数据时，我们可能希望它能自动附带上一些额外的参数。比如：  让所有请求自动加上时间戳，这样每次请求就不会有缓存。 或者让所有请求自动带上权限认证的 token，这样不用再为每个请求单独添加这个参数。  下面通过样例演示这个功能如何实现。 1，样例代码（1）这里我们使用 jQuery 的 ajaxSetup() 方法来进行全局配置，该方法可以为将来所有的 AJAX 请求设置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器缓存之Jquery自动给所有Ajax请求加上时间戳">
+<meta property="og:url" content="https://zengfeiyang666.github.io/2020/03/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E4%B9%8BjQuery%E8%87%AA%E5%8A%A8%E7%BB%99%E6%89%80%E6%9C%89Ajax%E8%AF%B7%E6%B1%82%E5%8A%A0%E4%B8%8A%E6%97%B6%E9%97%B4%E6%88%B3/index.html">
 <meta property="og:site_name" content="杨增非的BLOG">
-<meta property="og:description" content="SpringBoot,Spring,Java">
+<meta property="og:description" content="在使用 jQuery 请求数据时，我们可能希望它能自动附带上一些额外的参数。比如：  让所有请求自动加上时间戳，这样每次请求就不会有缓存。 或者让所有请求自动带上权限认证的 token，这样不用再为每个请求单独添加这个参数。  下面通过样例演示这个功能如何实现。 1，样例代码（1）这里我们使用 jQuery 的 ajaxSetup() 方法来进行全局配置，该方法可以为将来所有的 AJAX 请求设置">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zengfeiyang666.github.io/images/og_image.png">
+<meta property="article:published_time" content="2020-03-27T08:12:35.000Z">
+<meta property="article:modified_time" content="2020-03-27T08:12:35.000Z">
 <meta property="article:author" content="zengfeiyang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zengfeiyang666.github.io/images/og_image.png">
@@ -78,7 +80,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="杨增非的BLOG" height="28">
+                <img src="/images/logo.svg" alt="浏览器缓存之Jquery自动给所有Ajax请求加上时间戳" height="28">
             
             </a>
         </div>
@@ -86,7 +88,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/">首页</a>
                 
                 <a class="navbar-item"
@@ -142,176 +144,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><link rel="stylesheet" href="/css/main_banner.css">
-<div id='banner' class='card'></div>
-<script src="/js/main_banner.js" defer></script>
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-27T09:33:11.000Z">2020-03-27</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 365 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/27/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0GitHub/">Hexo搭建博客，注册域名，部署到GitHub</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="1、Hexo搭建博客步骤"><a href="#1、Hexo搭建博客步骤" class="headerlink" title="1、Hexo搭建博客步骤"></a>1、Hexo搭建博客步骤</h3><p>暂时略过</p>
-<h3 id="2、注册域名"><a href="#2、注册域名" class="headerlink" title="2、注册域名"></a>2、注册域名</h3><ol>
-<li><p>在<a href="[https://cloud.tencent.com](https://cloud.tencent.com/)">腾讯云</a>购买域名<a href="http://www.flymoon1028.com">flymoon1028.com</a>.</p>
-</li>
-<li><p>进行实名认证，域名备案（我申报后大概3小时就通过了，这个根据情况而定）。</p>
-</li>
-<li><p>备案通过后进行域名解析<br>1）打开iTerm,输入ping命令，得到github上博客IP地址</p></li></ol>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/03/27/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0GitHub/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 630 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/27/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">Hexo博客中图片显示问题</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="1-发现问题"><a href="#1-发现问题" class="headerlink" title="1. 发现问题"></a>1. 发现问题</h2><p>在HEXO发布的博文中，查看网页中的文章时，发现文章中的图片均不能查看，只是显示了图片的标题问题，查看控制台中的请求的数据发现，文章页面中的图片资源均是加载失败，对于在HEXO博客中的问题图片问题进行分析解决；</p>
-<h2 id="2-解决问题方法"><a href="#2-解决问题方法" class="headerlink" title="2. 解决问题方法"></a>2. 解决问题方法</h2><ol>
-<li>把HEXO配置文件 <code>_config.yml</code>中的<code>post_asset_folder</code>属性以及 <code>permalink</code> 属性，</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是否启动资源文件夹，开启后通过 hexo new title ,(title为文章标题)生成新文章会建立一个同名的文件夹</span></span><br><span class="line">post_asset_folder: <span class="literal">true</span></span><br><span class="line"><span class="comment"># 生成文章链接的格式，这是默认的格式；修改的规则也比较简单，标签前面要加英文冒号；（注意图片资源生成的格式必须是这个格式，否则会出现图片加载失败的情况）</span></span><br><span class="line">permalink: :year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
-
-<p>​    2.安装一个可以上传本地图片的插件，在<code>HEXO</code>项目的根目录下输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/03/27/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 375 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/">Mac中执行svn命令失效</a>
-            
-        </h1>
-        <div class="content">
-            <p>今天到公司，打开IDEA准备从SVN更新代码，显示无法连接SVN。What?搞什么鬼！</p>
-<p>打开iTerm,输入svn –version，想看一下svn版本号，确认一下svn是否真不可用了，果不其然，效果如图：</p>
-<p><img src="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/%E6%9F%A5%E7%9C%8Bsvn%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt></p>
-<p>看到这个报错，以为没有安装Xcode,晚上搜索了下，执行xcode-select –install命令，提示如图：</p>
-<p><img src="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/%E7%A1%AE%E8%AE%A4xcode%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85.png" alt></p>
-<p>可见，xcode没问题，接下来又是一顿各种搜索，什么重装xcode、重装comman line，貌似都不起作用。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
@@ -333,7 +166,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E4%B9%8BjQuery%E8%87%AA%E5%8A%A8%E7%BB%99%E6%89%80%E6%9C%89Ajax%E8%AF%B7%E6%B1%82%E5%8A%A0%E4%B8%8A%E6%97%B6%E9%97%B4%E6%88%B3/">浏览器缓存之Jquery自动给所有Ajax请求加上时间戳</a>
+                浏览器缓存之Jquery自动给所有Ajax请求加上时间戳
             
         </h1>
         <div class="content">
@@ -344,16 +177,15 @@
 </ul>
 <p>下面通过样例演示这个功能如何实现。</p>
 <h3 id="1，样例代码"><a href="#1，样例代码" class="headerlink" title="1，样例代码"></a>1，样例代码</h3><p>（1）这里我们使用 jQuery 的 ajaxSetup() 方法来进行全局配置，该方法可以为将来所有的 AJAX 请求设置默认值。<br>（2）通过 ajaxSetup() 方法中的 beforeSend 属性可以设置发送请求前运行的函数（它会拦截所有的请求)，我们在此对 url 进行修改，增加个时间戳参数。</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;jquery-3.1.1.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">      &#x2F;&#x2F;全局配置</span><br><span class="line">      $.ajaxSetup(&#123;</span><br><span class="line">        beforeSend: function(jqXHR, settings) &#123;</span><br><span class="line">            &#x2F;&#x2F;在请求前给修改url（增加一个时间戳参数）</span><br><span class="line">            settings.url +&#x3D; settings.url.match(&#x2F;\?&#x2F;) ? &quot;&amp;&quot; : &quot;?&quot;;</span><br><span class="line">            settings.url +&#x3D; &quot;token&#x3D;&quot; + new Date().getTime();</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;);</span><br><span class="line">      </span><br><span class="line">      &#x2F;&#x2F;按钮点击响应</span><br><span class="line">      function btnClick() &#123;</span><br><span class="line">        $.get(&quot;data.php&quot;, &#123;name: &quot;hangge&quot;&#125;, function(data)&#123;</span><br><span class="line">          alert(data);</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;请求数据&quot; onclick&#x3D;&quot;btnClick()&quot;&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2，效果图"><a href="#2，效果图" class="headerlink" title="2，效果图"></a>2，效果图</h3><p>点击“<strong>请求数据</strong>”按钮发起一个简单的get请求。可以看到虽然我们一开始只设置了<strong>name</strong> 这一个参数，但最终又自动添加了个 <strong>token</strong>（时间戳）参数。</p>
+<p><img src="/2020/03/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E4%B9%8BjQuery%E8%87%AA%E5%8A%A8%E7%BB%99%E6%89%80%E6%9C%89Ajax%E8%AF%B7%E6%B1%82%E5%8A%A0%E4%B8%8A%E6%97%B6%E9%97%B4%E6%88%B3/001.png" alt></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/03/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E4%B9%8BjQuery%E8%87%AA%E5%8A%A8%E7%BB%99%E6%89%80%E6%9C%89Ajax%E8%AF%B7%E6%B1%82%E5%8A%A0%E4%B8%8A%E6%97%B6%E9%97%B4%E6%88%B3/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -361,9 +193,50 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/pay/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/pay/wechat.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Mac中执行svn命令失效</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
 
 
 </div>
@@ -636,15 +509,13 @@
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow  ">
         
         </div>
     
 </div>
 
                 
-                    
-                 
             </div>
         </div>
     </section>
@@ -654,7 +525,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="杨增非的BLOG" height="28">
+                    <img src="/images/logo.svg" alt="浏览器缓存之Jquery自动给所有Ajax请求加上时间戳" height="28">
                 
                 </a>
                 <p class="is-size-7">
