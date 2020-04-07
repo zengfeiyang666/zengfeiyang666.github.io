@@ -7,17 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>美好瞬间 - 杨增非的BLOG</title>
+<title>HTTP协议相关 - 杨增非的BLOG</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="美好瞬间">
-<meta property="og:url" content="https://zengfeiyang666.github.io/photo/index.html">
+    <meta name="description" content="状态码目前 RFC 标准里规定的状态码是三位数，所以取值范围就是从 000 到 999。但如果把代码简单地从 000 开始顺序编下去就显得有点太“low”，不灵活、不利于扩展，所以状态码也被设计成有一定的格式。 RFC 标准把状态码分成了五类，用数字的第一位表示分类，而 099 不用，这样状态码的实际可用范围就大大缩小了，由 000999 变成了 100~599。 这五类的具体含义是：  1××：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP协议相关">
+<meta property="og:url" content="https://zengfeiyang666.github.io/2020/04/06/HTTP%E5%8D%8F%E8%AE%AE%E7%9B%B8%E5%85%B3/index.html">
 <meta property="og:site_name" content="杨增非的BLOG">
+<meta property="og:description" content="状态码目前 RFC 标准里规定的状态码是三位数，所以取值范围就是从 000 到 999。但如果把代码简单地从 000 开始顺序编下去就显得有点太“low”，不灵活、不利于扩展，所以状态码也被设计成有一定的格式。 RFC 标准把状态码分成了五类，用数字的第一位表示分类，而 099 不用，这样状态码的实际可用范围就大大缩小了，由 000999 变成了 100~599。 这五类的具体含义是：  1××：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zengfeiyang666.github.io/images/og_image.png">
-<meta property="article:published_time" content="2020-03-25T09:33:38.000Z">
-<meta property="article:modified_time" content="2020-03-25T09:33:38.000Z">
+<meta property="article:published_time" content="2020-04-06T03:33:48.807Z">
+<meta property="article:modified_time" content="2020-04-06T03:33:48.807Z">
 <meta property="article:author" content="zengfeiyang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zengfeiyang666.github.io/images/og_image.png">
@@ -78,7 +80,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="美好瞬间" height="28">
+                <img src="/images/logo.svg" alt="HTTP协议相关" height="28">
             
             </a>
         </div>
@@ -98,7 +100,7 @@
                 <a class="navbar-item"
                 href="/tags">标记</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/photo">相册</a>
                 
                 <a class="navbar-item"
@@ -147,17 +149,45 @@
     
     <div class="card-content article ">
         
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-04-06T03:33:48.807Z">2020-04-06</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 684 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                美好瞬间
+                HTTP协议相关
             
         </h1>
         <div class="content">
-            <div class="justified-gallery">
-
-<p><img src="/photo/index/family/2019%E5%B9%B4%E5%9B%BD%E5%BA%86%E5%81%87%E6%9C%9F%E5%8F%82%E5%8A%A0%E6%99%93%E5%8D%8E%E5%A9%9A%E7%A4%BC%E6%8A%A2%E5%88%B0%E6%96%B0%E4%BA%BA%E6%8D%A7%E8%8A%B1.jpg" alt="2019年国庆假期参加晓华婚礼抢到新人捧花"><br><img src="/photo/index/family/%E5%A9%9A%E7%BA%B1%E7%85%A7%E6%8B%8D%E6%91%84%E5%B0%8F%E6%86%A9.jpg" alt="婚纱照拍摄小憩"><br><img src="/photo/index/family/%E9%9D%92%E5%B2%9B%E8%9C%9C%E6%9C%88%E8%A1%8C-%E6%B5%B7%E8%BE%B9%E7%94%9C%E8%9C%9C%E7%9A%84%E5%B0%8F%E5%A4%AB%E5%A6%BB.jpg" alt="青岛蜜月行-海边甜蜜的小夫妻"><br><img src="/photo/index/family/%E9%9D%92%E5%B2%9B%E8%9C%9C%E6%9C%88%E8%A1%8C-%E9%AB%98%E5%85%B4%E5%9C%B0%E9%A3%9E%E8%B5%B7%E6%9D%A5%E7%9A%84%E5%AA%B3%E5%A6%87.jpg" alt="青岛蜜月行-高兴地飞起来的媳妇"><br><img src="/photo/index/family/%E9%9D%92%E5%B2%9B%E8%9C%9C%E6%9C%88%E8%A1%8C-%E9%81%A5%E6%9C%9B%E6%A0%88%E6%A1%A5.jpg" alt="青岛蜜月行-遥望栈桥"><br><img src="/photo/index/family/%E9%9D%92%E5%B2%9B%E8%9C%9C%E6%9C%88%E8%A1%8C-%E6%B5%B7%E9%B8%A5%E6%8A%A2%E9%A3%9F.jpg" alt="青岛蜜月行-海鸥抢食"><br><img src="/photo/index/family/%E9%9D%92%E5%B2%9B%E8%9C%9C%E6%9C%88%E8%A1%8C-%E5%8F%82%E8%A7%82%E9%9D%92%E5%B2%9B%E5%95%A4%E9%85%92%E5%8D%9A%E7%89%A9%E9%A6%86%E7%95%85%E9%A5%AE%E9%9D%92%E5%B2%9B%E5%95%A4%E9%85%92.jpg" alt="青岛蜜月行-参观青岛啤酒博物馆畅饮青岛啤酒"> </p>
-</div>
-
+            <h1 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h1><p>目前 RFC 标准里规定的状态码是三位数，所以取值范围就是从 000 到 999。但如果把代码简单地从 000 开始顺序编下去就显得有点太“low”，不灵活、不利于扩展，所以状态码也被设计成有一定的格式。</p>
+<p>RFC 标准把状态码分成了五类，用数字的第一位表示分类，而 0<del>99 不用，这样状态码的实际可用范围就大大缩小了，由 000</del>999 变成了 100~599。</p>
+<p>这五类的具体含义是：</p>
+<ul>
+<li>1××：提示信息，表示目前是协议处理的中间状态，还需要后续的操作；</li>
+<li>2××：成功，报文已经收到并被正确处理；</li>
+<li>3××：重定向，资源位置发生变动，需要客户端重新发送请求；</li>
+<li>4××：客户端错误，请求报文有误，服务器无法处理；</li>
+<li>5××：服务器错误，服务器在处理请求时内部发生了错误。</li>
+</ul>
+<h2 id="3××"><a href="#3××" class="headerlink" title="3××"></a>3××</h2><p>3××类状态码表示客户端请求的资源发生了变动，客户端必须用新的 URI 重新发送请求获取资源，也就是通常所说的“重定向”，包括著名的 301、302 跳转。</p>
+<p>“301 Moved Permanently”俗称“永久重定向”，含义是此次请求的资源已经不存在了，需要改用改用新的 URI 再次访问。</p>
+<p>与它类似的是“302 Found”，曾经的描述短语是“Moved Temporarily”，俗称“临时重定向”，意思是请求的资源还在，但需要暂时用另一个 URI 来访问。</p>
+<p>301 和 302 都会在响应头里使用字段 Location 指明后续要跳转的 URI，最终的效果很相似，浏览器都会重定向到新的 URI。两者的根本区别在于语义，一个是“永久”，一个是“临时”，所以在场景、用法上差距很大。</p>
+<p>比如，你的网站升级到了 HTTPS，原来的 HTTP 不打算用了，这就是“永久”的，所以要配置 301 跳转，把所有的 HTTP 流量都切换到 HTTPS。</p>
+<p>再比如，今天夜里网站后台要系统维护，服务暂时不可用，这就属于“临时”的，可以配置成 302 跳转，把流量临时切换到一个静态通知页面，浏览器看到这个 302 就知道这只是暂时的情况，不会做缓存优化，第二天还会访问原来的地址。</p>
+<p><img src="temp_images/image-20200406143614539.png" alt="image-20200406143614539"></p>
+<p><img src="temp_images/image-20200406143720012.png" alt="image-20200406143720012"></p>
 
         </div>
         
@@ -198,6 +228,27 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/04/07/Java%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD%E7%82%B9%E8%AE%B0%E5%BD%95/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Java编程技能点记录</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/04/03/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95/">
+                <span class="level-item">临时记录</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -516,7 +567,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="美好瞬间" height="28">
+                    <img src="/images/logo.svg" alt="HTTP协议相关" height="28">
                 
                 </a>
                 <p class="is-size-7">
