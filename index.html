@@ -207,6 +207,60 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-06-11T02:21:26.000Z">2020-06-11</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 分钟 读完 (大约 2041 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/">layui-tree如何实现懒加载以及动态局部渲染子节点</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><p>众所周知，layui.tree的树形控件，在渲染树节点时，需要后台准备好整个组织树的数据；如果组织树的数据量特别大，页面渲染特别慢。最近在<a href="https://www.hixiaoe.com">狐小E智慧办公</a>平台中，展示企业部门树时，就遇到这种问题；当时产品要求，部门树渲染要特别快，同时某部门下新增、删除了一个子部门时，要动态刷新，实时呈现；然而layui.tree的原始机制是，必须重新加载整个树的数据再渲染，这样就会导致展开的节点全收缩回去，而不是刚好展开到该父部门位置；</p>
+<p>这样就有2个问题亟需优化</p>
+<p>1）部门树数据量大、层级多时，全部渲染慢。</p>
+<p>2）父部门添加子部门，当前父部门层级树无法做到局部更新视图；</p>
+<p>为了解决这两个问题，我们只好修改layui.tree源码，实现这个高大上功能；废话不多说，直接上干货：</p>
+<p><a href="https://www.hixiaoe.com">狐小E智慧办公</a>中台后台使用的layui版本是v2.5.x,其他版本的layui源码可能有所不同，这点需注意。</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-04-10T08:42:24.000Z">2020-04-10</time>
                 
                 
@@ -523,7 +577,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -652,6 +706,25 @@
         
         <article class="media">
             
+            <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="layui-tree如何实现懒加载以及动态局部渲染子节点">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-11T02:21:26.000Z">2020-06-11</time></div>
+                    <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">layui-tree如何实现懒加载以及动态局部渲染子节点</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/10/window-open%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E8%A2%AB%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%A6%E6%88%AA%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="window.open打开新窗口被浏览器拦截的处理方法">
@@ -707,25 +780,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac中执行svn命令失效">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time></div>
-                    <a href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Mac中执行svn命令失效</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -743,7 +797,7 @@
                     <span class="level-item">六月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
