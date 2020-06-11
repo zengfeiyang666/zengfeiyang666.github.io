@@ -7,17 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档: 2020 - 杨增非的BLOG</title>
+<title>杨增非的BLOG</title>
 
 
-    <meta name="description" content="SpringBoot,Spring,Java">
+    <meta name="description" content="临时记录“爬虫”（Crawler） TCP&#x2F;IP分层设计思想TCP&#x2F;IP 当初的设计者真的是非常聪明，创造性地提出了“分层”的概念，把复杂的网络通信划分出多个层次，再给每一个层次分配不同的职责，层次内只专心做自己的事情就好，用“分而治之”的思想把一个“大麻烦”拆分成了数个“小麻烦”，从而解决了网络通信的难题。  域名的形式在第 4 讲曾经说过，域名是一个有层次的结构，是一串用“.”分隔的多个单词，">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杨增非的BLOG">
-<meta property="og:url" content="https://zengfeiyang666.github.io/archives/2020/index.html">
+<meta property="og:url" content="https://zengfeiyang666.github.io/temp/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95.html">
 <meta property="og:site_name" content="杨增非的BLOG">
-<meta property="og:description" content="SpringBoot,Spring,Java">
+<meta property="og:description" content="临时记录“爬虫”（Crawler） TCP&#x2F;IP分层设计思想TCP&#x2F;IP 当初的设计者真的是非常聪明，创造性地提出了“分层”的概念，把复杂的网络通信划分出多个层次，再给每一个层次分配不同的职责，层次内只专心做自己的事情就好，用“分而治之”的思想把一个“大麻烦”拆分成了数个“小麻烦”，从而解决了网络通信的难题。  域名的形式在第 4 讲曾经说过，域名是一个有层次的结构，是一串用“.”分隔的多个单词，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zengfeiyang666.github.io/images/og_image.png">
+<meta property="article:published_time" content="2020-06-11T06:56:07.999Z">
+<meta property="article:modified_time" content="2020-06-11T06:56:07.999Z">
 <meta property="article:author" content="zengfeiyang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://zengfeiyang666.github.io/images/og_image.png">
@@ -78,7 +80,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="杨增非的BLOG" height="28">
+                <img src="/images/logo.svg" alt="" height="28">
             
             </a>
         </div>
@@ -143,107 +145,79 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                
+            
+        </h1>
+        <div class="content">
+            <h1 id="临时记录"><a href="#临时记录" class="headerlink" title="临时记录"></a>临时记录</h1><p>“爬虫”（Crawler）</p>
+<h1 id="TCP-IP分层设计思想"><a href="#TCP-IP分层设计思想" class="headerlink" title="TCP/IP分层设计思想"></a>TCP/IP分层设计思想</h1><p>TCP/IP 当初的设计者真的是非常聪明，创造性地提出了“分层”的概念，把复杂的网络通信划分出多个层次，再给每一个层次分配不同的职责，层次内只专心做自己的事情就好，用“<strong>分而治之</strong>”的思想<strong>把一个“大麻烦”拆分成了数个“小麻烦”</strong>，从而解决了网络通信的难题。</p>
+<p><img src="/temp/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95.htm/%E4%B8%B4%E6%97%B6%E8%AE%B0%E5%BD%95.png" alt="image-20200403183926835"></p>
+<h1 id="域名的形式"><a href="#域名的形式" class="headerlink" title="域名的形式"></a>域名的形式</h1><p>在第 4 讲曾经说过，域名是一个有层次的结构，是一串用“.”分隔的多个单词，最右边的被称为“顶级域名”，然后是“二级域名”，层级关系向左依次降低。</p>
+<p>最左边的是主机名，通常用来表明主机的用途，比如“www”表示提供万维网服务、“mail”表示提供邮件服务，不过这也不是绝对的，名字的关键是要让我们容易记忆。</p>
+<p>看一下极客时间的域名“time.geekbang.org”，这里的“org”就是顶级域名，“geekbang”是二级域名，“time”则是主机名。使用这个域名，DNS 就会把它转换成相应的 IP 地址，你就可以访问极客时间的网站了。</p>
+<h1 id="域名的解析"><a href="#域名的解析" class="headerlink" title="域名的解析"></a>域名的解析</h1><p>就像 IP 地址必须转换成 MAC 地址才能访问主机一样，</p>
+<p>域名也必须要转换成 IP 地址，这个过程就是“域名解析”。</p>
+<h1 id="架构相关"><a href="#架构相关" class="headerlink" title="架构相关"></a>架构相关</h1><p>汇编语言的出现要早于操作系统。操作系统的核心目标是软件治理，只有在计算机需要管理很多的任务时，才需要有操作系统。</p>
+<p>计算机加电启动后，中央处理器（CPU）会从一个固定的存储地址加载指令序列执行。通常，这个固定的存储地址指向计算机主板的 ROM 上的一段启动程序（BIOS）。</p>
+<p>内存是进程运行的基础资源，保持进程基础资源的独立性，是软件治理的最基础的要求。</p>
+<p>操作系统则属于基础软件，它和我们编写的软件并不在同一个进程（进程是软件的一个运行后产生的实例，同一个软件可以运行多次得到多个进程）中。</p>
+<p>线程的出现，则是因为操作系统发现同一个软件内还是会有多任务的需求，这些任务处在相同的地址空间，彼此之间相互可以信任。</p>
+<h2 id="数字化"><a href="#数字化" class="headerlink" title="数字化"></a>数字化</h2><p><a href="https://mp.weixin.qq.com/s/FTWB9jc0qHnX9e38VtU4aw">https://mp.weixin.qq.com/s/FTWB9jc0qHnX9e38VtU4aw</a></p>
+<p>现实世界由万事万物构成，而计算机能够处理，只有数据。说得更直接一点，计算机能够处理的其实都是数字。因此，当我们用计算机来协助处理日常事物的时候，首先要做的一件事就是数字化。</p>
+<p>虽然在实践中，通常存储在计算机存储设备上的数字化数据是二进制形式的。但严格来说，任何把模拟源转换为任意类型数字格式的过程，都可以叫做数字化。</p>
+<p><strong>数字化指将信息转换成数字格式的过程</strong>。具体而言，就是把一个物体，图像，声音，文本或者信号转换为一系列数字的集合：</p>
+<ul>
+<li>一张图片的数字化是将其被分割成若干的像素，每个像素用 R（red，红色）G（green，绿色）B（blue，蓝色）三种颜色分量对应的三个 0-255 的值来表示；</li>
+<li>一段声音的数字化则是将记录下来的模拟声波经由傅里叶变换转化为若干三角函数的叠加；</li>
+<li>文字的数字化是针对不同字符体系进行编码，将某一字符转化为一个特定的数字“号码”；</li>
+<li>……</li>
+</ul>
 
-<div class="card widget">
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2020
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-06-11T02:21:26.000Z">2020-06-11</time>
-                        <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">layui-tree如何实现懒加载以及动态加载子节点数据</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/pay/alipay.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-04-10T08:42:24.000Z">2020-04-10</time>
-                        <a href="/2020/04/10/window-open%E6%89%93%E5%BC%80%E6%96%B0%E7%AA%97%E5%8F%A3%E8%A2%AB%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%A6%E6%88%AA%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">window.open打开新窗口被浏览器拦截的处理方法</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-27T09:33:11.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%9F%9F%E5%90%8D%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0GitHub/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo搭建博客，注册域名，部署到GitHub</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/pay/wechat.jpg" alt="微信"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo博客中图片显示问题</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/Mac%E4%B8%AD%E6%89%A7%E8%A1%8Csvn%E5%91%BD%E4%BB%A4%E5%A4%B1%E6%95%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Mac中执行svn命令失效</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-27T08:12:35.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E4%B9%8BjQuery%E8%87%AA%E5%8A%A8%E7%BB%99%E6%89%80%E6%9C%89Ajax%E8%AF%B7%E6%B1%82%E5%8A%A0%E4%B8%8A%E6%97%B6%E9%97%B4%E6%88%B3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">浏览器缓存之Jquery自动给所有Ajax请求加上时间戳</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
         </div>
     </div>
 </div>
+
+
 
 
 </div>
@@ -557,15 +531,13 @@
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow  ">
         
         </div>
     
 </div>
 
                 
-                    
-                 
             </div>
         </div>
     </section>
@@ -575,7 +547,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="杨增非的BLOG" height="28">
+                    <img src="/images/logo.svg" alt="" height="28">
                 
                 </a>
                 <p class="is-size-7">
