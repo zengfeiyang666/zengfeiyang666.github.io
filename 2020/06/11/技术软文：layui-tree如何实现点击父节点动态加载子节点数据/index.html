@@ -7,12 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>layui-tree如何实现懒加载以及动态加载子节点数据 - 杨增非的BLOG</title>
+<title>layui-tree如何实现懒加载以及动态局部渲染子节点 - 杨增非的BLOG</title>
 
 
     <meta name="description" content="问题引入众所周知，layui.tree的树形控件，在渲染树节点时，需要后台准备好整个组织树的数据；如果组织树的数据量特别大，页面渲染特别慢。最近在狐小E智慧办公平台中，展示企业部门树时，就遇到这种问题；当时产品要求，部门树渲染要特别快，同时某部门下新增&#x2F;删除了一个子部门时，要动态刷新，实时呈现；然而layui.tree的原始机制是，必须重新加载整个树的数据再渲染，这样就会导致展开的节点全收缩回去，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="layui-tree如何实现懒加载以及动态加载子节点数据">
+<meta property="og:title" content="layui-tree如何实现懒加载以及动态局部渲染子节点">
 <meta property="og:url" content="https://zengfeiyang666.github.io/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="杨增非的BLOG">
 <meta property="og:description" content="问题引入众所周知，layui.tree的树形控件，在渲染树节点时，需要后台准备好整个组织树的数据；如果组织树的数据量特别大，页面渲染特别慢。最近在狐小E智慧办公平台中，展示企业部门树时，就遇到这种问题；当时产品要求，部门树渲染要特别快，同时某部门下新增&#x2F;删除了一个子部门时，要动态刷新，实时呈现；然而layui.tree的原始机制是，必须重新加载整个树的数据再渲染，这样就会导致展开的节点全收缩回去，">
@@ -80,7 +80,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="layui-tree如何实现懒加载以及动态加载子节点数据" height="28">
+                <img src="/images/logo.svg" alt="layui-tree如何实现懒加载以及动态局部渲染子节点" height="28">
             
             </a>
         </div>
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13 分钟 读完 (大约 1995 个字)
+                    13 分钟 读完 (大约 1996 个字)
                 </span>
                 
                 
@@ -166,7 +166,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                layui-tree如何实现懒加载以及动态加载子节点数据
+                layui-tree如何实现懒加载以及动态局部渲染子节点
             
         </h1>
         <div class="content">
@@ -174,7 +174,7 @@
 <p>这样就有2个问题亟需优化</p>
 <p>1）部门树数据量大、层级多时，全部渲染慢。</p>
 <p>2）父部门添加子部门，当前父部门层级树无法做到局部更新视图；</p>
-<p>为了解决这个问题，我们只好修改layui.tree源码，实现这个高大上功能；废话不多说，直接上干货：</p>
+<p>为了解决这两个问题，我们只好修改layui.tree源码，实现这个高大上功能；废话不多说，直接上干货：</p>
 <p><a href="https://www.hixiaoe.com">狐小E智慧办公</a>中台后台使用的layui版本是v2.5.x,其他版本的layui源码可能有所不同，这点需注意。</p>
 <a id="more"></a>
 
@@ -420,14 +420,14 @@
             
             <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="layui-tree如何实现懒加载以及动态加载子节点数据">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="layui-tree如何实现懒加载以及动态局部渲染子节点">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-11T02:21:26.000Z">2020-06-11</time></div>
-                    <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">layui-tree如何实现懒加载以及动态加载子节点数据</a>
+                    <a href="/2020/06/11/%E6%8A%80%E6%9C%AF%E8%BD%AF%E6%96%87%EF%BC%9Alayui-tree%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E7%88%B6%E8%8A%82%E7%82%B9%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE/" class="title has-link-black-ter is-size-6 has-text-weight-normal">layui-tree如何实现懒加载以及动态局部渲染子节点</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -590,7 +590,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="layui-tree如何实现懒加载以及动态加载子节点数据" height="28">
+                    <img src="/images/logo.svg" alt="layui-tree如何实现懒加载以及动态局部渲染子节点" height="28">
                 
                 </a>
                 <p class="is-size-7">
