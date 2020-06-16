@@ -10,6 +10,17 @@
 
 <title>layui-tree如何实现懒加载以及动态局部渲染子节点 - 杨增非的BLOG</title>
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?584cbc043a8518e192da44c425bfb8cb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
 
     <meta name="description" content="问题引入众所周知，layui.tree的树形控件，在渲染树节点时，需要后台准备好整个组织树的数据；如果组织树的数据量特别大，页面渲染特别慢。最近在狐小E智慧办公平台中，展示企业部门树时，就遇到这种问题；当时产品要求，部门树渲染要特别快，同时某部门下新增、删除了一个子部门时，要动态刷新，实时呈现；然而layui.tree的原始机制是，必须重新加载整个树的数据再渲染，这样就会导致展开的节点全收缩回去，">
 <meta property="og:type" content="article">
